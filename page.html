@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page.css">
+    <title>page</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">
+            <h3>Instruction: <span style="color: grey; font-size: 1.1rem; font-weight: 400; "> Hello there write your
+                    content </span> </h3>
+        </div>
+    </div>
+    <section class="major">
+
+        <div class="col1" style="height: auto;">
+            <div class="middle"
+                style="display: flex;justify-content: center;align-items: center; flex-direction: column;">
+                <div id="ctl" class="first">
+                    <h4>Control panel</h4>
+                </div>
+                <div id="box" class="specimen" style="width: 14rem;">
+                    <div id="specimen" class="specimen">
+                        <label for="specimen">Specimen-:</label>
+                        <select name="sample" id="specimen">
+                            <option selected value=".">Select sample</option>
+                            <option value="alm">aluminium</option>
+                            <option value="gla">glass</option>
+                            <option value="ppr">paper</option>
+                            <option value="snd">sand</option>
+                            <option value="cpr">copper</option>
+                        </select>
+                    </div>
+
+                    <div id="start" class="specimen">
+                        Start-:ON<input type="radio" name="start"> OFF<input type="radio" name="start">
+                    </div>
+
+                    <div id="door" class="specimen">
+                        Doors-:<button id="openButton" class="button-91 "
+                            style=" height: 2rem; margin: .2rem; padding: .2rem; width: 4rem;">OPEN</button>
+                        <button id="closeButton" class="button-91 "
+                            style=" height: 2rem; margin: .2rem; padding: .2rem; width: 4rem;">CLOSE</button>
+                    </div>
+                </div>
+                <div>
+                    <h4>X-Ray Tube</h4>
+                </div>
+                <div id="box" class="xraytube" style="width: 14rem;">
+                    <div>
+                        <div id="standby" class="xraytube">
+                            StandBy/ON:&nbsp;<button style="border-radius: 38px;" type="button">.</button>
+                        </div>
+                        <div id="volcrt" class="xraytube">
+                            <button>kV</button>
+                            <input type="number" style="width: 2rem;">
+                            <button>mA</button>
+                            <input type="number" style="width: 2rem;">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4>SCAN SETTING</h4>
+                </div>
+                <div id="box" class="scanset" style="width: 14rem;">
+                    <div id="angle" class="scanset">
+                        Start angle(2θ):&nbsp;<input type="number" style="width: 2rem;">
+                    </div>
+                    <div id="end" class="scanset">end angle(2θ):&nbsp;<input type="number" style="width: 2rem;"></div>
+                    <div id="size" class="scanset"> <label for="stepsize">Stepsize:&nbsp;</label>
+                        <select name="angle" id="stepsize">
+                            <option value="alm">0.005&deg;</option>
+                            <option value="gla">0.01&deg;</option>
+                            <option value="ppr">0.02&deg;</option>
+                        </select>
+                    </div>
+                    <div id="rate" class="scanset"> <label for="rate">Scanrate:&nbsp;</label>
+                        <select name="angle" id="rate">
+                            <option value="alm">0.2&deg;/sec</option>
+                            <option value="gla">0.08&deg;/sec</option>
+                            <option value="ppr">0.04&deg;/sec</option>
+                        </select>
+                    </div>
+                    <div id="time" class="scanset">
+                        SCANTIME:&nbsp;<div id="box"
+                            style="border: 1px solid black; padding: .1rem; height: .8rem; width: 8rem; display: inline-block;">
+                        </div>
+                    </div>
+                    <div><button
+                            style="border: 2px solid black;margin: .2rem;  padding: .2rem; width: 4rem; border-radius: 3px;">SCAN</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+        <div class="col2" style="display: flex;justify-content: center; align-items: center; flex-direction: column;">
+            <h2 style="color: aliceblue;"> XRD Simulator </h2>
+            <div class="gate">
+                <div class="door left-door" id="leftDoor"></div>
+                <div class="door right-door" id="rightDoor"></div>
+            </div>
+            <div>
+                <div style="position: relative;">
+                    <img src="machine2.png" style="height: 40rem;" alt="xrd image">
+                    <div style="position: absolute;  bottom: 20.3rem; left: 5.6rem;">
+                        <img src="source.png" style="height: 5rem;">
+                    </div>
+                    <div style="position: absolute;  bottom: 21.5rem; left: 18.5rem;">
+                        <img src="detector.png" style="height: 4rem;">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col3">
+            this is me
+        </div>
+    </section>
+    <script>
+        const leftDoor = document.getElementById('leftDoor');
+        const rightDoor = document.getElementById('rightDoor');
+        const openButton = document.getElementById('openButton');
+        const closeButton = document.getElementById('closeButton');
+
+        openButton.addEventListener('click', () => {
+            leftDoor.classList.add('opened');
+            rightDoor.classList.add('opened');
+        });
+
+        closeButton.addEventListener('click', () => {
+            leftDoor.classList.remove('opened');
+            rightDoor.classList.remove('opened');
+        });
+    </script>
+</body>
+
+</html>

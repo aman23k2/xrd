@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass Door Gate</title>
+    <style>
+
+        .gate {
+            display: flex;
+            width: 400px;
+            height: 200px;
+            /* background-color: #555; */
+            overflow: hidden;
+        }
+
+        .door {
+            flex: 1;
+            background-color: transparent;
+            transition: transform 1s ease;
+            transform-origin: left center;
+            background-color: rgb(148, 148, 148);
+            opacity: 0.1;
+        }
+
+        .right-door {
+            transform-origin: right center;
+        }
+
+        .left-door.opened {
+            transform: scaleX(0);
+        }
+
+        .right-door.opened {
+            transform: scaleX(0);
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="gate">
+        <div class="door left-door" id="leftDoor"></div>
+        <div class="door right-door" id="rightDoor"></div>
+    </div>
+    <button id="openButton">Open Gate</button>
+    <button id="closeButton">Close Gate</button>
+    <script>
+        const leftDoor = document.getElementById('leftDoor');
+        const rightDoor = document.getElementById('rightDoor');
+        const openButton = document.getElementById('openButton');
+        const closeButton = document.getElementById('closeButton');
+
+        openButton.addEventListener('click', () => {
+            leftDoor.classList.add('opened');
+            rightDoor.classList.add('opened');
+        });
+
+        closeButton.addEventListener('click', () => {
+            leftDoor.classList.remove('opened');
+            rightDoor.classList.remove('opened');
+        });
+    </script>
+</body>
+</html>

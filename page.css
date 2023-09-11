@@ -1,0 +1,188 @@
+*{
+    font-style: bold;
+    font-size: 24px;
+}
+#box{
+    background-color: black;
+    /* width: 40rem; */
+    padding: 0.5rem 2rem;
+}
+.item{
+    background: white;
+    border: 1px solid rgb(69, 36, 135);
+    height: 70px;
+    text-align: left;
+}
+.container{
+    margin-bottom:0.3rem;
+}
+ .col1{
+    display: inline-block;
+    background:  rgb(54, 53, 53);
+    border: 1px solid greenyellow;
+    width: 25%;
+    margin-top: 2px;
+    
+
+}
+
+.col2{
+    display: inline-block;
+    background:  rgb(15, 0, 0);
+    border: 1px solid greenyellow;
+    height: auto;
+    width: 30%;
+    margin-top: 2px;
+
+}
+
+.col3{
+    display: inline-block;
+    background: rgb(15, 0, 0);
+    border: 1px solid greenyellow;
+    height: auto;
+    width: 45%;
+    margin-top: 2px;
+
+} */
+h3{
+    padding: 2px;
+}
+.specimen{
+    border: 2px 
+    solid black;
+    background-color:rgb(230, 219, 219);
+    padding: .5rem;
+     padding: .5rem;
+      width: 13rem;
+      border-radius: 8px;
+      margin: 1px;
+}
+.xraytube{
+    border: 2px 
+    solid black;
+    background-color:rgb(230, 219, 219);
+    padding: .5rem;
+     padding: .5rem;
+      width: 13rem;
+      border-radius: 8px;
+      margin: 1px;
+}
+.scanset{
+    border: 2px 
+    solid black;
+    background-color:rgb(230, 219, 219);
+     padding: .5rem;
+      width: 13rem;
+      border-radius: 8px;
+      margin: 1px;
+}
+h4{
+    border: 2px
+    solid black;
+    background-color: rgb(209, 227, 227);
+     padding: .5rem;
+     margin: auto;
+      width: 8rem;
+      border-radius: 4px;
+      margin: 1px;
+      
+}
+.major{
+    display: flex;
+    gap: 0.3rem;
+}
+
+@media(max-width:600px){
+    .major{
+        display: flex;
+        gap: 0.5rem;
+        flex-direction: column;
+    }
+    .col1,.col2,.col3{
+        width: 100%;
+    }
+}
+
+
+.button-91 {
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(#464d55, #25292e);
+  border-radius: 8px;
+  border-width: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  font-family: expo-brand-demi,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 18px;
+  height: 52px;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 32px;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all 150ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-91:hover {
+  box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
+  opacity: .85;
+}
+
+.button-91:active {
+  outline: 0;
+}
+
+.button-91:focus {
+  box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
+}
+
+@media (max-width: 420px) {
+  .button-91 {
+    height: 48px;
+  }
+}
+
+.gate {
+    display: flex;
+    width: 16.8rem;
+    height: 14.7rem;
+    overflow: hidden;
+    position: absolute;
+    z-index: 999;
+    top: 13.2rem;
+}
+
+.door {
+    flex: 1;
+    background-color: transparent;
+    transition: transform 1s ease;
+    transform-origin: left center;
+    background-color: rgb(137, 160, 203);
+    opacity: 0.5;
+}
+
+.right-door {
+    transform-origin: right center;
+}
+
+.left-door.opened {
+    transform: scaleX(0);
+}
+
+.right-door.opened {
+    transform: scaleX(0);
+}

@@ -1,0 +1,41 @@
+.specimen{
+    border: 2px 
+    solid black;
+    background-color:rgb(230, 219, 219);
+    padding: .5rem;
+     padding: .5rem;
+      width: 13rem;
+      border-radius: 4px;
+      margin: 1px;
+}
+.xraytube{
+    border: 2px 
+    solid black;
+    background-color:rgb(230, 219, 219);
+    padding: .5rem;
+     padding: .5rem;
+      width: 13rem;
+      border-radius: 4px;
+      margin: 1px;
+}
+.scanset{
+    border: 2px 
+    solid black;
+    background-color:rgb(230, 219, 219);
+     padding: .5rem;
+      width: 13rem;
+      border-radius: 4px;
+      margin: 1px;
+}
+h4{
+    border: 2px
+    solid black;
+    background-color: rgb(209, 227, 227);
+     padding: .5rem;
+     margin: auto;
+      width: 8rem;
+      border-radius: 4px;
+      margin: 1px;
+      
+}
+
